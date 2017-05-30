@@ -1,0 +1,97 @@
+body {
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Basic forms */
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    border: 1px solid darkgray;
+    border-radius: 2px;
+    min-height: 35px;
+}
+
+/* Contact form */
+#contactForm {
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+/* Admin navbar */
+@media screen and (min-width: 768px) {
+    .admin-bar.navbar-collapse {
+        padding-left: 0px;
+    }
+
+    .admin-bar ul:first-child a {
+        padding-left: 0px;
+    }
+}
+
+/* navigation */
+.main-navigation {
+    position: relative;
+}
+
+/* System Message */
+.system-message {
+    position: fixed;
+    width: 300px;
+    min-height: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2980b9;
+    border-color: #080808;
+    border-radius: 10px;
+    color: white;
+    display: none;
+    padding-bottom: 25px;
+}
+.system-message .system-message-quit img {
+    height: 30px;
+    padding: 5px;
+    float: right;
+    cursor: pointer;
+}
+.system-message .message-title {
+    font-size: 24px;
+    padding: 5px 15px;
+}
+.system-message .message-message {
+    padding: 5px 15px;
+}
+.system-message hr {
+    margin: 0px 15px;
+}

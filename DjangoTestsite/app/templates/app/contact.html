@@ -1,0 +1,38 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<div class="message"></div>
+<form role="form" action="" method="post" id="contactForm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+<script type="text/javascript">
+    $('#contactForm').submit(function (e) {
+        $.post('/contact', $(this).serialize(), function (data) {
+            var json = JSON.parse(data);
+            $('.system-message').css("display", "block");
+            $('.system-message .message-title').html(json["title"]);
+            $('.system-message .message-message').html(json["message"]);
+        });
+        e.preventDefault();
+    });
+</script>
+{% endblock %}
