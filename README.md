@@ -1,5 +1,4 @@
-<h1>Starting point for my Django based CMS.</h1><br/>
-<br/>
+<h1>Starting point for my Django based CMS.</h1>
 Will be hopefully turning this into a full featured usable CMS.<br/>
 <br/>
 <b>Current Features:</b><br/>
